@@ -4,6 +4,7 @@ import { SignIn, SignInButton, SignedOut } from "@clerk/clerk-react";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggler } from "./ThemeToggler";
 
 function Header() {
   return (
@@ -21,7 +22,7 @@ function Header() {
         <h1 className="font-bold text-xl">Dropbox</h1>
       </Link>
       <div className="px-5 flex space-x-2 items-center">
-        {/* Theme toggler */}
+        <ThemeToggler/>
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
             <SignInButton afterSignInUrl="/dashboard" mode="modal"/>
