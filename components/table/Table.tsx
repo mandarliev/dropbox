@@ -34,6 +34,11 @@
       getCoreRowModel: getCoreRowModel(),
     });
 
+    const openDeleteModal = (fileId: string) => {
+      setFileId(fileId);
+      setIsDeleteModalOpen(true);
+    }
+
     return (
       <div className="rounded-md border">
         <Table>
